@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "ava": "^3.4.0"
+  },
+  "dependencies": {
+    "vue": "^2.6.11"
   }
 }
