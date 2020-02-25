@@ -5,12 +5,29 @@ import Notification from "../src/Notification";
 
 test('that it renders a notification',  t => {
 
-     // t.is(Notification.data().message, 'Hello World');
+    let N = Vue.extend(Notification);
 
-    let n = new Vue(Notification).$mount();
+    let vm = new N({ propsData : {
 
-    t.pass();
+            message: 'Foobar'
 
-    console.log(n.$el.innerHTML);
+        } }).$mount();
+
+    t.is(vm.$el.textContent, 'FOOBAR');
+
+});
+
+
+test('that it capitalize the message',  t => {
+
+    let N = Vue.extend(Notification);
+
+    let vm = new N({ propsData : {
+
+            message: 'foobar'
+
+        } }).$mount();
+
+    t.is(vm.$el.textContent, 'FOOBAR');
 
 });

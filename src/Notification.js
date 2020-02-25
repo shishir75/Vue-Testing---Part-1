@@ -1,10 +1,19 @@
 export default {
 
-    template: "<div>{{ message }}</div>",
+    template: "<div>{{ message | capitalize }}</div>",
 
-    data() {
-        return {
-            message: 'Hello World'
+    props: ['message'],
+
+    // data() {
+    //     return {
+    //         message: 'Hello World'
+    //     }
+    // }
+
+    filters: {
+        capitalize(message) {
+
+            return message.toUpperCase();
         }
     }
 
