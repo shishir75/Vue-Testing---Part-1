@@ -7,8 +7,10 @@ test('that it renders a notification',  t => {
 
      // t.is(Notification.data().message, 'Hello World');
 
-    new Vue(Notification).$mount();
+    let n = new Vue(Notification).$mount();
 
-    t.pass()
+    t.pass();
+
+    console.log(n.$el.innerHTML);
 
 });
