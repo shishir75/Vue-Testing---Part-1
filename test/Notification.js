@@ -3,10 +3,12 @@ import test from "ava";
 import Notification from "../src/Notification";
 
 
-test('that it renders a notification', t => {
+test('that it renders a notification',  t => {
 
-    //t.is(Notification.data().message, 'Hello World');
+     // t.is(Notification.data().message, 'Hello World');
 
     new Vue(Notification).$mount();
+
+    t.pass()
 
 });

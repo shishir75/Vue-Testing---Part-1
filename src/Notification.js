@@ -1,6 +1,6 @@
 export default {
 
-    template: '<div>{{ message }}</div>',
+    template: "<div>{{ message }}</div>",
 
     data() {
         return {
