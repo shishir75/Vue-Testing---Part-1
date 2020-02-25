@@ -3,30 +3,20 @@ import test from "ava";
 import Notification from "../src/Notification";
 
 
-test('that it renders a notification',  t => {
+let vm;
 
+test.beforeEach(t => {
     let N = Vue.extend(Notification);
 
-    let vm = new N({ propsData : {
+    vm = new N({ propsData : {
 
             message: 'Foobar'
 
         } }).$mount();
-
-    t.is(vm.$el.textContent, 'FOOBAR');
-
 });
 
 
-test('that it capitalize the message',  t => {
-
-    let N = Vue.extend(Notification);
-
-    let vm = new N({ propsData : {
-
-            message: 'foobar'
-
-        } }).$mount();
+test('that it renders a notification',  t => {
 
     t.is(vm.$el.textContent, 'FOOBAR');
 
